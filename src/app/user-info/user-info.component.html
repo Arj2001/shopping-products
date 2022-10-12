@@ -1,15 +1,16 @@
 <div class="container mt-3">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 sticky-top">
-            <button class="btn d-sm-none" type="button" data-toggle="collapse" data-target="#example-collapse">
-                <span class="navbar-light"><span class="navbar-toggler-icon"></span></span>
-            </button>
 
-            <div id="example-collapse" class="collapse d-sm-block">
+            <div  class="collapse d-none d-sm-block">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
-                        <li *ngFor="let x of category" class="page-item"><a class="page-link" href="#{{x}}">{{x}}</a>
-                        </li>
+                        <li class="page-item"><a class="page-link" href="#smartphones">SmartPhones</a></li>
+                        <li class="page-item"><a class="page-link" href="#laptops">Laptops</a></li>
+                        <li class="page-item"><a class="page-link" href="#fragrances">Fragrances</a></li>
+                        <li class="page-item"><a class="page-link" href="#skincare">Skincare</a></li>
+                        <li class="page-item"><a class="page-link" href="#groceries">Groceries</a></li>
+                        <li class="page-item"><a class="page-link" href="#home-decoration">HomeDecoration</a></li>
 
                     </ul>
                 </nav>
