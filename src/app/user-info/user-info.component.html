@@ -1,0 +1,48 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 sticky-top">
+            <button class="btn d-sm-none" type="button" data-toggle="collapse" data-target="#example-collapse">
+                <span class="navbar-light"><span class="navbar-toggler-icon"></span></span>
+            </button>
+
+            <div id="example-collapse" class="collapse d-sm-block">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li *ngFor="let x of category" class="page-item"><a class="page-link" href="#{{x}}">{{x}}</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div *ngFor="let i of userData.products "
+                    class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3" id="{{i.category}}">
+                    <div class="card">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade"
+                            data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div *ngFor="let j of i.images" class="carousel-item active" data-bs-interval="2000">
+                                    <img height="300px" src="{{j}}" class="d-block w-100 card-img-top" alt="...">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">{{i.title}}</h5>
+                            <p class="card-text">{{i.description}}</p>
+                            <p class="card-text d-inline fs-4">${{i.price}} <span class="fs-6">off
+                                    {{i.discountPercentage}}% </span> </p>
+                            <p class="card-text d-inline text-end text-danger">{{i.stock}} items left</p>
+                            <br>
+                            <p class="card-text">Rating: <span class="badge bg-success">{{i.rating}}</span> </p>
+                            <a href="#" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
