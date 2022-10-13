@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 sticky-top">
 
-            <div  class="collapse d-none d-sm-block">
+            <div class="collapse d-none d-sm-block">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
                         <li class="page-item"><a class="page-link" href="#smartphones">SmartPhones</a></li>
@@ -25,8 +25,12 @@
                         <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade"
                             data-bs-ride="carousel">
                             <div class="carousel-inner">
-                                <div *ngFor="let j of i.images" class="carousel-item active" data-bs-interval="2000">
-                                    <img height="300px" src="{{j}}" class="d-block w-100 card-img-top" alt="...">
+                                <div class="carousel-item active">
+                                    <img height="300px" src="{{i.thumbnail}}" class="d-block w-100 "
+                                        alt="...">
+                                </div>
+                                <div *ngFor="let j of i.images" class="carousel-item" >
+                                    <img height="300px" src="{{j}}" class="d-block w-100" alt="...">
                                 </div>
                             </div>
                         </div>
